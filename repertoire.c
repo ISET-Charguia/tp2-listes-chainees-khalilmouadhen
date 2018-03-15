@@ -33,6 +33,14 @@ void afficheFiche(ficheptr lafiche) {
 	}
 }
 void ajouterFiche(repertoire lerepertoire, ficheptr lafiche) {
+	char carac='A';int i=0;
+	while(toupper(lafiche->nom[0]!=carac)
+	{
+		carac=carac+1;
+		i++;
+	}
+	majuscule(lafiche);
+	ajouterDansOnglet(lerepertoire[i]->longlet,lafiche);
     
     
 
@@ -75,6 +83,22 @@ void repertoireVide(repertoire lerepertoire) {
 	int i;
 	for (i = 0; i < 26; i++)
 		lerepertoire[i] = NULL;
+}
+	
+	void rechercheTel(char *nom){
+	i=0;c='A';
+	while(*nom[0]!=c)
+	{
+		i++;
+		c++;
+	}
+	p=lerepertoire[i]->longlet;
+	while(p->suivante!=NULL)
+	{
+		if(strcmp(p->lafiche->nom,*nom)==0)
+			
+			afficheFiche(p->lafiche)
+	}
 }
 void menu(repertoire lerepertoire) {
 
